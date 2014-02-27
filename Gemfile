@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.1.12'
+ruby '2.0.0'
+
+gem 'rails', '3.2.13'
+gem 'unicorn'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -14,11 +17,15 @@ gem 'will_paginate', '~> 3.0.pre4'
 gem 'css3buttons'
 gem 'cancan', '~> 1.6.10'
 gem 'inherited_resources'
-gem 'rack', '~> 1.3.10' # fix Rack vulnerability
+gem 'rack', '>= 1.4.5' # fix Rack vulnerability
 gem 'nokogiri'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+group :deployment do
+  gem "capistrano"
+  gem "capistrano-bundler", github: 'capistrano/bundler'
+  gem "capistrano-rails", github: 'capistrano/rails'
+end
 
 # To use debugger
 # gem 'ruby-debug'
@@ -44,13 +51,14 @@ group :development, :test do
   gem 'factory_girl_rails', :require => false
   gem 'launchy', :require => false
   gem 'spork', '0.9.0.rc9', :require => false
+  gem 'unicorn-rails'
 end
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.1.5'
-  gem 'coffee-rails', '~> 3.1.1'
+  gem 'sass-rails',   '>= 3.2.3'
+  gem 'coffee-rails', '>= 3.1.1'
   gem 'uglifier', '>= 1.0.3'
 end
 
