@@ -21,11 +21,11 @@ gem 'rack', '>= 1.4.5' # fix Rack vulnerability
 gem 'nokogiri'
 
 # Deploy with Capistrano
-group :deployment do
-  gem "capistrano"
-  gem "capistrano-bundler", github: 'capistrano/bundler'
-  gem "capistrano-rails", github: 'capistrano/rails'
-end
+# group :deployment do
+#   gem "capistrano"
+#   gem "capistrano-bundler", github: 'capistrano/bundler'
+#   gem "capistrano-rails", github: 'capistrano/rails'
+# end
 
 # To use debugger
 # gem 'ruby-debug'
