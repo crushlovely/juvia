@@ -43,16 +43,16 @@ end
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
-group :development, :test do
-  gem 'rspec-rails', '~> 2.4'
-  gem 'capybara', :require => false
-  gem 'capybara-webkit', :require => false
-  gem 'database_cleaner', :require => false
-  gem 'factory_girl_rails', :require => false
-  gem 'launchy', :require => false
-  gem 'spork', '0.9.0.rc9', :require => false
-  gem 'unicorn-rails'
-end
+# group :development, :test do
+#   gem 'rspec-rails', '~> 2.4'
+#   gem 'capybara', :require => false
+#   gem 'capybara-webkit', :require => false
+#   gem 'database_cleaner', :require => false
+#   gem 'factory_girl_rails', :require => false
+#   gem 'launchy', :require => false
+#   gem 'spork', '0.9.0.rc9', :require => false
+#   gem 'unicorn-rails'
+# end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -62,17 +62,17 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-group :mysql do
-  # adapter: mysql2
-  gem 'mysql2', :require => false
-end
+# group :mysql do
+#   # adapter: mysql2
+#   gem 'mysql2', :require => false
+# end
 
-group :postgres do
-  # adapter: postgresql
-  gem 'pg', :require => false
-end
+# group :postgres do
+#   # adapter: postgresql
+#   gem 'pg', :require => false
+# end
 
-group :sqlite do
-  # adapter: sqlite3
-  gem 'sqlite3', :require => false
-end
+# group :sqlite do
+#   # adapter: sqlite3
+#   gem 'sqlite3', :require => false
+# end
